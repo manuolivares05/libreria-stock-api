@@ -2,7 +2,7 @@ from fastapi import APIRouter, Depends, status
 from sqlalchemy.orm import Session
 from app.config.database import get_db
 from app.services.categoria_service import categoria_service
-from app.schemas.schemas import CategoriaCreate, CategoriaUpdate, CategoriaResponse
+from app.schemas.categorias import CategoriaCreate, CategoriaUpdate, CategoriaResponse
  
 router = APIRouter(prefix="/categorias", tags=["Categorías"])
  

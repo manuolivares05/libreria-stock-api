@@ -2,7 +2,7 @@ from fastapi import APIRouter, Depends, status
 from sqlalchemy.orm import Session
 from app.config.database import get_db
 from app.services.venta_service import venta_service
-from app.schemas.schemas import VentaCreate, VentaResponse
+from app.schemas.venta import VentaCreate, VentaResponse
  
 router = APIRouter(prefix="/ventas", tags=["Ventas"])
  

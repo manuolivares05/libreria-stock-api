@@ -22,7 +22,6 @@ def get_engine():
  
 def create_tables():
     """Solo desarrollo. Producción usa Alembic."""
-    _engine.metadata = Base.metadata
     Base.metadata.create_all(bind=_engine)
  
  

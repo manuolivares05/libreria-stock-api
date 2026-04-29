@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
 from app.models.proveedor import Proveedor
-from app.schemas.schemas import ProveedorCreate, ProveedorUpdate
+from app.schemas.proveedor import ProveedorCreate, ProveedorUpdate
 from app.repository.base_repository import BaseRepository
  
  

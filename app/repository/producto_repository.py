@@ -1,7 +1,7 @@
 
 from sqlalchemy.orm import Session, joinedload
 from app.models.producto import Producto
-from app.schemas.schemas import ProductoCreate, ProductoUpdate
+from app.schemas.producto import ProductoCreate, ProductoUpdate
 from app.repository.base_repository import BaseRepository
  
  

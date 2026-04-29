@@ -2,7 +2,7 @@ from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 from app.config.database import get_db
 from app.services.movimiento_service import movimiento_service
-from app.schemas.schemas import MovimientoResponse
+from app.schemas.movimiento import MovimientoResponse
  
 router = APIRouter(prefix="/movimientos", tags=["Movimientos"])
  

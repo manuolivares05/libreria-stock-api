@@ -1,9 +1,6 @@
-from __future__ import annotations
-from datetime import datetime
-from decimal import Decimal
-from typing import Optional
-from pydantic import BaseModel, ConfigDict, field_validator
- 
- 
-class SchemaBase(BaseModel):
-    model_config = ConfigDict(from_attributes=True)
+from app.schemas.categorias  import CategoriaCreate, CategoriaUpdate, CategoriaResponse
+from app.schemas.proveedor  import ProveedorCreate, ProveedorUpdate, ProveedorResponse
+from app.schemas.producto   import ProductoCreate, ProductoUpdate, ProductoResponse
+from app.schemas.stock      import StockResponse, StockUpdate
+from app.schemas.movimiento import MovimientoResponse, EntradaStockCreate
+from app.schemas.venta      import ItemVentaCreate, VentaCreate, DetalleVentaResponse, VentaResponse

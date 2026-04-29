@@ -2,8 +2,9 @@ from fastapi import APIRouter, Depends, status
 from sqlalchemy.orm import Session
 from app.config.database import get_db
 from app.services.stock_service import stock_service
-from app.schemas.schemas import StockResponse, StockUpdate, EntradaStockCreate
- 
+from app.schemas.stock import StockResponse, StockUpdate
+from app.schemas.movimiento import EntradaStockCreate
+
 router = APIRouter(prefix="/stock", tags=["Stock"])
  
 @router.get("/", response_model=list[StockResponse])

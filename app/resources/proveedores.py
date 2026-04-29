@@ -2,7 +2,7 @@ from fastapi import APIRouter, Depends, status
 from sqlalchemy.orm import Session
 from app.config.database import get_db
 from app.services.proveedor_service import proveedor_service
-from app.schemas.schemas import ProveedorCreate, ProveedorUpdate, ProveedorResponse
+from app.schemas.proveedor import ProveedorCreate, ProveedorUpdate, ProveedorResponse
  
 router = APIRouter(prefix="/proveedores", tags=["Proveedores"])
  

@@ -1,3 +1,5 @@
+from app.schemas.movimiento import MovimientoResponse
+
 class MovimientoMapper:
  
     @staticmethod
@@ -5,8 +7,7 @@ class MovimientoMapper:
         return MovimientoResponse.model_validate(orm_obj)
  
     @staticmethod
-    def to_response_list(orm_list: list) -> list[MovimientoResponse]:
-        return [MovimientoMapper.to_response(obj) for obj in orm_list]
- 
+    def to_list(orm_list: list) -> list:
+        return [MovimientoMapper.to_response(o) for o in orm_list]
  
 movimiento_mapper = MovimientoMapper()

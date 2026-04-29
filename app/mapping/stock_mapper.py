@@ -1,3 +1,5 @@
+from app.schemas.stock import StockResponse
+
 class StockMapper:
  
     @staticmethod
@@ -11,8 +13,7 @@ class StockMapper:
         )
  
     @staticmethod
-    def to_response_list(orm_list: list) -> list[StockResponse]:
-        return [StockMapper.to_response(obj) for obj in orm_list]
- 
+    def to_list(orm_list: list) -> list:
+        return [StockMapper.to_response(o) for o in orm_list]
  
 stock_mapper = StockMapper()

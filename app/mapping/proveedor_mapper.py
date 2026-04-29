@@ -1,3 +1,5 @@
+from app.schemas.proveedor import ProveedorResponse
+
 class ProveedorMapper:
  
     @staticmethod

@@ -1,6 +1,6 @@
 from typing import Generic, TypeVar, Type, Optional
 from sqlalchemy.orm import Session
-from app.core.database import Base
+from app.config.database import Base
  
 ModelType  = TypeVar("ModelType",  bound=Base)
 CreateType = TypeVar("CreateType")

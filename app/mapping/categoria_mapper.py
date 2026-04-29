@@ -1,3 +1,5 @@
+from app.schemas.categorias import CategoriaResponse
+
 class CategoriaMapper:
  
     @staticmethod

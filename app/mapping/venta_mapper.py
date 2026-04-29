@@ -1,3 +1,6 @@
+from decimal import Decimal
+from app.schemas.venta import VentaResponse, DetalleVentaResponse
+
 class VentaMapper:
  
     @staticmethod

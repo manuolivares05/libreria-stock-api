@@ -1,3 +1,8 @@
+from app.schemas.producto import ProductoResponse
+from app.schemas.categorias import CategoriaResponse
+from app.schemas.proveedor import ProveedorResponse
+
+
 class ProductoMapper:
  
     @staticmethod

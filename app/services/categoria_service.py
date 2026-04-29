@@ -1,8 +1,7 @@
-
 from sqlalchemy.orm import Session
 from fastapi import HTTPException, status
 from app.repository.categoria_repository import categoria_repository
-from app.schemas.schemas import CategoriaCreate, CategoriaUpdate, CategoriaResponse
+from app.schemas.categorias import CategoriaCreate, CategoriaUpdate, CategoriaResponse
  
  
 class CategoriaService:

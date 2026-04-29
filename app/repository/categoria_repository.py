@@ -1,7 +1,6 @@
- 
 from sqlalchemy.orm import Session
 from app.models.categoria import Categoria
-from app.schemas.schemas import CategoriaCreate, CategoriaUpdate
+from app.schemas.categorias import CategoriaCreate, CategoriaUpdate
 from app.repository.base_repository import BaseRepository
  
  
