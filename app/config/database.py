@@ -35,6 +35,10 @@ def get_db():
     db = _SessionLocal()
     try:
         yield db
+        db.commit()       # ← commit al finalizar exitosamente
+    except Exception:
+        db.rollback()     # ← rollback si algo falla
+        raise
     finally:
         db.close()
  

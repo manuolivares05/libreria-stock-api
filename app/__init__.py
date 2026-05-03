@@ -38,26 +38,10 @@ def create_app() -> FastAPI:
         allow_headers=["*"],
     )
  
-    @app.middleware("http")
-    async def db_transaction_middleware(request: Request, call_next):
-        response = Response("Internal server error", status_code=500)
-        db = next(database.get_db())  # sesión directa, sin Depends
-        request.state.db = db
-        try:
-            response = await call_next(request)
-            db.commit() if response.status_code < 400 else db.rollback()
-        except Exception:
-            db.rollback()
-            raise
-        finally:
-            db.close()
-        return response
- 
     # ── Routers ────────────────────────────────────────────────────────────
     _register_routers(app)
  
     return app
- 
  
 def _load_models():
     """
